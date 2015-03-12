@@ -23,5 +23,6 @@ echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> /home/vagrant/.bashrc
 echo "export JAVA_HOME" >> /home/vagrant/.bashrc
 echo "export JRE_HOME" >> /home/vagrant/.bashrc
 echo "export PATH" >> /home/vagrant/.bashrc
+echo "[+] Going down for reboot"
 sleep 5s
 reboot
