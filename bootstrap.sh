@@ -17,7 +17,7 @@ update-java-alternatives -s java-7-oracle
 wget -O /opt/openidm.zip https://www.dropbox.com/s/yb0ngxtnree7cin/openidm-3.1.0.zip
 sudo unzip /opt/openidm.zip -d /opt/
 echo "[+] Added Startup to Crontab"
-echo '@reboot vagrant /opt/openidm/startup.sh' > /etc/cron.d/openidm
+echo '@reboot root /opt/openidm/startup.sh' > /etc/cron.d/openidm
 echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle/" >> /home/vagrant/.bashrc
 echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> /home/vagrant/.bashrc
 echo "export JAVA_HOME" >> /home/vagrant/.bashrc
