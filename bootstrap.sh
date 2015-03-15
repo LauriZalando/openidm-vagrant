@@ -14,8 +14,9 @@ echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | su
 apt-get install -y oracle-java7-installer
 echo "[+] added Java"
 update-java-alternatives -s java-7-oracle
-wget -O /opt/openidm.zip https://www.dropbox.com/s/yb0ngxtnree7cin/openidm-3.1.0.zip
-sudo unzip /opt/openidm.zip -d /opt/
+wget -O /tmp/openidm.zip https://github.com/OpenRock/OpenIDM/releases/download/3.1.0/openidm-3.1.0.zip
+sudo unzip /tmp/openidm.zip -d /opt/
+rm /tmp/openidm.zip
 echo "[+] Added Startup to Crontab"
 echo '@reboot root /opt/openidm/startup.sh' > /etc/cron.d/openidm
 echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle/" >> /home/vagrant/.bashrc
